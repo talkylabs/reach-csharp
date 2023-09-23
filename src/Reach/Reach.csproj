@@ -7,7 +7,7 @@
     <Copyright>Copyright © TalkyLabs</Copyright>
     <AssemblyTitle>Reach-TalkyLabs</AssemblyTitle>
     <NeutralLanguage>en-US</NeutralLanguage>
-    <VersionPrefix>6.5.0</VersionPrefix>
+    <VersionPrefix>1.0.0</VersionPrefix>
     <VersionSuffix>
     </VersionSuffix>
     <Authors>TalkyLabs</Authors>
@@ -16,9 +16,10 @@
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <AssemblyName>Reach-TalkyLabs</AssemblyName>
     <PackageTags>REST;SMS;reach;talkylabs;api</PackageTags>
-    <PackageIconUrl>https://www.reach.talkylabs.com/docs/static/company/img/logos/reach-1.png</PackageIconUrl>
+    <PackageIconUrl>https://console.reach.talkylabs.com/images/Reach-1-T.png</PackageIconUrl>
     <PackageProjectUrl>http://github.com/talkylabs/reach-csharp</PackageProjectUrl>
     <PackageLicenseUrl>https://github.com/talkylabs/reach-csharp/blob/HEAD/LICENSE</PackageLicenseUrl>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
     <RepositoryUrl>http://github.com/talkylabs/reach-csharp</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <NetStandardImplicitPackageVersion Condition=" '$(TargetFramework)' == 'netstandard1.4' ">1.6.1</NetStandardImplicitPackageVersion>
@@ -55,5 +56,8 @@
   <ItemGroup Condition="($(TargetFramework.StartsWith('net3')) OR $(TargetFramework.StartsWith('net4'))) AND '$(MSBuildRuntimeType)' == 'Core' AND '$(OS)' != 'Windows_NT'">
     <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.0" PrivateAssets="All" />
     <PackageReference Include="jnm2.ReferenceAssemblies.net35" Version="1.0.1" PrivateAssets="All" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\README.md" Pack="true" PackagePath="\"/>
   </ItemGroup>
 </Project>
